@@ -40,22 +40,6 @@ from salome_pluginsmanager import AddFunction
 from hydrogeo_salome import *
 from hydrogeo_salome import hydrogeo_interface as interface
 
-# %% setup
-plugin_path = ""
-# add SALOME_PLUGIN_PATH to Python environment for easier module import
-if (os.environ.get("SALOME_PLUGINS_PATH") is not None):
-    plugin_path = os.environ.get("SALOME_PLUGINS_PATH") +\
-                  os.sep + "hydrogeo_salome"
-if not (os.path.exists(plugin_path + os.sep + "hydrogeo_salome_handler.py")):
-    import inspect
-    plugin_path = os.path.dirname(inspect.getfile(inspect.currentframe())) +\
-                  os.sep + "hydrogeo_salome"
-
-sys.path.append(plugin_path)
-
-if not (os.path.exists(plugin_path + os.sep + "__init__.py")):
-    sys.exit("No hydrogeology module found")
-
 # ========================================================================
 # CARTESIAN GRID MODEL
 AddFunction('Hydrogeology Modelling/Cartesian Grid Model',
