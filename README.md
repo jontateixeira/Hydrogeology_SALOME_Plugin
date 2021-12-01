@@ -18,7 +18,7 @@ This plugin is currently work in progress. Furthermore it is more research orien
 
 ## Getting Started
 
-This plugin was tested on the latest release of Salome (which is up to date 9.6.0) running on Ubuntu 20.04 and Windows 10. Nevertheless, it should work for newer release of Salome and for other platform. Note that Salome 8.6.0 uses Python 3 and consequently, the plugin is not compatible as is with Salome version older than 9.2.0. 
+This plugin was tested on the latest release of Salome (version 9.6.0) which is up to date 9.7.0, running on Ubuntu 20.04 and Windows 10. Nevertheless, it should work for newer release of Salome and for other platform. Note that Salome 8.6.0 uses Python 3 and consequently, the plugin is not compatible as is with Salome version older than 9.2.0. 
 
 This Salome plugin offers two ways of creating models; with and without graphical user interface, the **GUI** (Graphical User Interface) and the **TUI** (Text User Interface, batch) modes respectively. Please see [here](https://www.salome-platform.org/user-section/faq/faq#_faq_003_07) for more details about the TUI mode and [here](https://www.salome-platform.org/user-section/faq/faq#_faq_003_08) to known the differences between GUI and TUI.
 
@@ -30,48 +30,33 @@ To install of this plugin is needed three steps:
 
 2. Get the plugin by cloning this repo or unzip it and copy the content of the folder into `$HOME/.config/salome/Plugins/`, for _Linux_, or `%USERPROFILE%/.config/salome/Plugins/` in _Windows_
 
-3. To make your life easier and avoid any `ImportError` or `ModuleNotFoundError`, during module imports in the Salome initialization, proceed as follows (This step is optional, just for safety and sanity):
-    * Set the environment variables for using the plugin:
-      * _Windows_
-
-          Add an [environment variable](https://www.computerhope.com/issues/ch000549.htm) named`SALOME_PLUGINS_PATH` pointing to the directory where the code was cloned to.
-          E.g. `%USERPROFILE%/.config/salome/Plugins/`
-
-      * _Linux_
-
-          Add an environment variable named `SALOME_PLUGINS_PATH` pointing to the directory where the code was cloned to.
-          E.g. `export SALOME_PLUGINS_PATH="${HOME}.config/salome/Plugins/"`\
-          Use `echo SALOME_PLUGINS_PATH="${HOME}.config/salome/Plugins/" >> ~/.bashrc` to directly add it to your `bashrc`
-
-4. We need to have install the some modules (plugin dependencies) within Salome, for this we must perform the following steps :
+3. We need to have install the some modules (plugin dependencies) within Salome, for this we must perform the following steps :
 
     * Go to your Salome installation folder and open a terminal.
     * Setup the Salome environment with the command:
       * _Windows_
 
           ```sh
-          ./env_launch.exe
-          python3.exe .\salome shell
+          .\run_salome.exe shell
           ```
 
       * _Linux_
 
           ```sh
-          ./env_launch.sh
-          python3 salome shell
+          ./salome shell
           ```
 
-    * [Download or upgrade](https://pip.pypa.io/en/stable/installation/) the `pip` version of Salome and install the whell package:
+    * [Download or upgrade](https://pip.pypa.io/en/stable/installation/) the `pip` version of Salome and install the wheel package:
 
         ```sh
         pip3 install --upgrade pip
         pip3 install wheel
         ```
 
-    * Finally, install the `pysh` and `scipy` module with the command:
+    * Finally, install the `pyshp` and `scipy` module with the command:
 
         ```sh
-        pip3 install pysh
+        pip3 install pyshp
         pip3 install scipy
         ```
 
