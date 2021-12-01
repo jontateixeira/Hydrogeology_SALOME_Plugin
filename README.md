@@ -34,7 +34,7 @@ To install of this plugin is needed three steps:
     * Set the environment variables for using the plugin:
       * _Windows_
 
-          Add an [environment variable](https://www.computerhope.com/issues/ch000549.htm) named`SALOME_PLUGINS_PATH` pointing to the directory where the code was cloned to.
+          Add an [environment variable](https://www.computerhope.com/issues/ch000549.htm) named `SALOME_PLUGINS_PATH` pointing to the directory where the code was cloned to.
           E.g. `%USERPROFILE%/.config/salome/Plugins/`
 
       * _Linux_
@@ -50,7 +50,7 @@ To install of this plugin is needed three steps:
       * _Windows_
 
           ```sh
-          ./env_launch.exe
+          ./env_launch.exe{.bat} 
           python3.exe .\salome shell
           ```
 
@@ -61,17 +61,17 @@ To install of this plugin is needed three steps:
           python3 salome shell
           ```
 
-    * [Download or upgrade](https://pip.pypa.io/en/stable/installation/) the `pip` version of Salome and install the whell package:
+    * [Download or upgrade](https://pip.pypa.io/en/stable/installation/) the `pip` version of Salome and install the wheel package:
 
         ```sh
         pip3 install --upgrade pip
         pip3 install wheel
         ```
 
-    * Finally, install the `pysh` and `scipy` module with the command:
+    * Finally, install the `pyshp` and `scipy` module with the command:
 
         ```sh
-        pip3 install pysh
+        pip3 install pyshp
         pip3 install scipy
         ```
 
